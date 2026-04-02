@@ -395,7 +395,7 @@ async function send(body){
 }
 async function sheets(data){
   if(!EV_URL)return;
-  try{await fetch(EV_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch{}
+  try{await fetch(EV_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data),mode:'no-cors'});}catch{}
 }
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
